@@ -1,0 +1,35 @@
+.cont-txt{
+	font-size: 30px;
+	text-align: center;
+}
+.cont{
+	background-color: #0086D3;
+	color: white;
+	font-family: 'Permanent Marker', cursive;
+}
+.t-txt h3{
+	font-family: 'Caveat Brush', cursive;
+	padding-left: 50px;
+	font-size: 40px;
+	text-decoration: underline;
+}
+.t-txt-box{
+	text-align: center;
+}
+.t-txt h1{
+	font-family: 'Caveat Brush', cursive;
+}
+.t-txt input{
+	font-family: 'Caveat Brush', cursive;
+}
+.tweets{
+	padding-left: 50px;
+	font-size: 20px;
+	line-height: 50px;
+}
+.tweet_area{
+	background-color: lightgrey;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 20px;
+}
