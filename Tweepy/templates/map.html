@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hashtag Input</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row cont">
+			<div class="cont-txt">
+				<div class="col-md-12 col-xs-12 col-sm-12">
+					<h1>Using Flask and Tweepy</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="t-txt-box">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4 col-xs-12 col-sm-12">
+					<div class="t-txt">
+					<h1>Enter the Hashtag here: </h1>
+						<form method="POST" action="/hash">
+							<div class="form-group">
+								<input type="text" name="hashtag">
+							</div>
+							<input class="btn btn-primary" type="submit" value="submit" name="satyam">
+						</form>
+					</div>
+				</div>			
+				<div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
