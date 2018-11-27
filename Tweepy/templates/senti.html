@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter with Python</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row cont">
+		<div class="cont-txt">
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<h1>Natural Language Processing: Flask Back-end and TextBlob</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-2 col-xs-2">
+		</div>
+		<div class="col-md-4 col-sm-8 col-xs 8">
+		<div class="t-txt">
+			<h3>Sentiment Analysis</h3>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-2 col-xs-2">
+	</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-xs-2 col-sm-2">
+		</div>
+		<div class="col-md-8 col-xs-8 col-sm-8">
+			<div class="tweets">
+				{{ word }} is a <strong> {{ ans }} </strong> with Polarity {{ sentiment }}
+			</div>
+		</div>
+		<div class="col-md-2 col-xs-2 col-sm-2">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
