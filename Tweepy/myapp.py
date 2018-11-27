@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for, session, g, flash
 import tweepy 
 import requests
+from textblob import TextBlob
 
 
 #############################################################################################
 ################################  TWEEPY SETUP  #################################################
 
-consumer_key = ''
-consumer_secret = ''
-access_token = ''
-access_token_secret = ''
+consumer_key = 'xxxxxxxxxxxx'
+consumer_secret = 'xxxxxxxxxxxxxxx'
+access_token = 'xxxxxxxxxxxxxxxxx'
+access_token_secret = 'xxxxxxxxxxxxxxx'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -49,6 +50,24 @@ def hash():
 		return render_template('hash.html', h = h, hashtag = hashtag)
 
 	return render_template('map.html')
+
+#---------------GETTING TWEETS FOR SENTIMENT ANALYSIS---------------
+@app.route('/senti', methods=['GET', 'POST'])
+def senti():
+	if request.method=='POST':
+		word = request.form['senti_word']
+		#pt = api.search(word)
+		analysis = TextBlob(word)
+		sentiment = analysis.sentiment.polarity
+		if sentiment > 0:
+			ans = 'Positive Statement'
+		elif sentiment < 0:
+			ans = 'Negative Statement'
+		else:
+			ans = 'Neutral Statement'
+		return render_template('senti.html', word = word, ans = ans, sentiment = sentiment)
+	return render_template('senti_form.html')
+
 
 if (__name__ == "__main__"):
 	app.debug = True
